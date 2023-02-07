@@ -1,0 +1,25 @@
+.inputArea {
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+}
+
+.searchInput {
+  border-style: solid;
+  border-color: blue;
+  border-width: 2px;
+  margin: 20px;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+table,
+th,
+td {
+  border: 1px solid;
+}

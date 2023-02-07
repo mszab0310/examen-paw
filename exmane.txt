@@ -1,0 +1,23 @@
+Obiective realizate:
+Aplicatia dispune de un formular de introducere pentru a salva o carte in sistemul creat,
+se cere introducerea autorului, titlului  si a descrierii cartii pentru a permite salvarea.
+
+Pe partea de interogare a sistemului, se poate cere listarea tuturor cartilor salvate in sistem
+in forma tabelara, sau cautarea dupa un cuvant cheie. Cautarea returneaza o lista de carti
+care contin ori in titlu,ori in fieldul de autor, ori in descriere cuvantul cautat. In cazul
+in care nu se gaseste nici o inregistrare care respecta conditia creata, 
+cuvantul cheie este salvat intro tabela separata in baza de data al aplicatiei. 
+La apasarea butonului getAll, se returneaza in forma tabelara toate cartile salvate in sistem.
+
+Etapele implementarii:
+Am decis sa fac o aplicatie distribuita cu clientul de ReactJs si cu backend de (evident) spring boot
+si un DB PostgreSQL.
+Am creat aplicatia de spring boot in intellij cu spring initializr, am adaugat dependintele de baza
+inainte de creare cum ar fi spring web, jdbc, jpa, lombok (pentru simplificarea boilerplatului cerut 
+de oop) si driverul pentru baza de data PostgreSQL. Am creat db-ul pe calculator, am configurat conexiunea
+in springboot, am implementat entitatile de baze de date, modelul Book si Queries,
+am implementat interfetele de interogare specifice JPA pentru ambele entitati, am creat 
+layerul de service pentru interactionare cu entitatile din db, controllerul REST pentru operatiile 
+HTTP, am creat doua endpointuri de GET, unul pentru getAll unul pt cautare. Partea de cautare este un script SQL simplu, cu wildcards.
+PArtea de ui a fost cateva input fielduri, o tablea generata dinamic, si requesturile HTTP au fost facuta cu axios.
+Resurse web folosite: stackoverflow pt css la tabela
